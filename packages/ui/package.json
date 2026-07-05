@@ -1,0 +1,37 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./button": {
+      "types": "./src/Button/index.ts",
+      "import": "./src/Button/index.ts"
+    }
+  },
+  "sideEffects": [
+    "**/*.scss"
+  ],
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@repo/eslint-airbnb": "*",
+    "@repo/stylelint-config": "*",
+    "@repo/typescript-config": "*",
+    "@repo/vite-config": "*",
+    "@storybook/react-vite": "^10.1.11",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "clsx": "^2.1.1"
+  },
+  "peerDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

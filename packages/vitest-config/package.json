@@ -1,0 +1,10 @@
+{
+  "name": "@repo/vitest-config",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "vitest.config.ts",
+  "dependencies": {
+    "vitest": "^4.0.14"
+  }
+}

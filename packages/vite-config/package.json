@@ -1,0 +1,12 @@
+{
+  "name": "@repo/vite-config",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "main": "vite.config.ts",
+  "dependencies": {
+    "@repo/typescript-config": "*",
+    "@vitejs/plugin-react": "^5.1.1",
+    "vite": "^7.2.4"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "book-repo-test",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "prepare": "husky",
+    "test": "vitest",
+    "storybook:ui": "npm --workspace packages/ui run storybook",
+    "build-storybook:ui": "npm --workspace packages/ui run build-storybook"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.6.2",
+    "turbo": "^2.6.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.6.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
