@@ -1,0 +1,41 @@
+{
+  "name": "books",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "axios": "^1.13.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-airbnb": "*",
+    "@repo/stylelint-config": "*",
+    "@repo/typescript-config": "*",
+    "@repo/vite-config": "*",
+    "@repo/vitest-config": "*",
+    "@repo/ui": "*",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "clsx": "^2.1.1",
+    "sass": "^1.94.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "eslint",
+      "prettier --write --ignore-unknown"
+    ],
+    "src/**/*.{css,scss}": [
+      "npm run lint-style-fix",
+      "prettier --write --ignore-unknown"
+    ]
+  }
+}
